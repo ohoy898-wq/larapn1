@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --bg-deep: #1D1A30;
+  --bg-card: #2A2544;
+  --bg-card-hover: #342D58;
+  --bg-chip: #352E52;
+  --text-warm: #F3EEE3;
+  --text-muted: #B6AFC9;
+  --text-faint: #8880A0;
+  --line: rgba(243, 238, 227, 0.12);
+  --gold: #E8A94A;
+  --coral: #DD7A68;
+  --teal: #5FADA6;
+  --sage: #98A96F;
+  --violet: #A78BC4;
+  --radius-card: 18px;
+  --radius-chip: 999px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Pretendard", sans-serif;
+}
+
+:root[data-theme="light"] {
+  --bg-deep: #FAF7F0;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F3EEE3;
+  --bg-chip: #F0EAF9;
+  --text-warm: #23203A;
+  --text-muted: #565070;
+  --text-faint: #8A84A0;
+  --line: rgba(35, 32, 58, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-deep);
+  color: var(--text-warm);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.animate-nudge {
+  animation: nudge 0.35s ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}

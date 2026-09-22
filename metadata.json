@@ -1,0 +1,6 @@
+{
+  "name": "라라 B-2 프로젝트 — 새로운 시민사회 만들기",
+  "description": "새로운 행성 라라 B-2에 정착할 4명의 지도자를 선택하고, 10년간 발생하는 위기 상황 속에서 이상적인 시민사회의 가치와 균형을 탐구하는 대화형 시뮬레이션입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
